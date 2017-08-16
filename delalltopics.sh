@@ -1,4 +1,4 @@
-for TOPIC in $(./bin/kafka-topics.sh --list --zookeeper 127.0.0.1)
+for TOPIC in $(../bin/kafka-topics.sh --list --zookeeper 127.0.0.1)
 do
   if [ "__consumer_offsets" = "$TOPIC" ]
   then
