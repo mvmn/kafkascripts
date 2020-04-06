@@ -1,1 +1,3 @@
-../bin/kafka-topics.sh --zookeeper localhost --create --replication-factor 1 --partitions 1 --topic $*
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+. $DIR/setconnectparam.sh
+../bin/kafka-topics.sh $KAFKA_SRV --create --replication-factor 1 --partitions 1 --topic $*
